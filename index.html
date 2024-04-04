@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <!-- link to awesome fonts -->
+    <script src="https://kit.fontawesome.com/e3a07b35ad.js" crossorigin="anonymous"></script>
+
     <!-- link to my CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -27,8 +30,8 @@
                 <button aria-label="Close navigation" class="close-nav">&times;</button>
 
                 <ul class="nav-list">
-                    <li class="nav-item"><a href ="#" class="nav-link">About us</a></li>
-                    <li class="nav-item"><a href ="#" class="nav-link">Our services</a></li>
+                    <li class="nav-item"><a href ="#about-us" class="nav-link">About us</a></li>
+                    <li class="nav-item"><a href ="#services" class="nav-link">Our services</a></li>
                     <li class="nav-item"><a href ="#" class="nav-link">Contact us</a></li>
                 </ul>
             </nav>
@@ -38,94 +41,128 @@
     <main>
 
         <section class="hero main-grid">
-            <h1 class="hero-title">The Finest Clean for Your Machine!</h1>
-            <p class="hero-subtitle subtitle">Car Kilat</p>
+            <div class="hero-content">
+                <h1 class="hero-title">The Finest Clean for Your Machine!</h1>
+                <p class="hero-subtitle subtitle">Car Kilat</p>
+            </div>
         </section>
 
 
-        <section class="about-us main-grid">
-            <div class="intro">
-                <p class="subtitle">"Welcome to CarKilat: Your Award-Winning Auto Detailing Destination</p>
-                <h2 class="about-us-title">CarKilat Malaysia</h2>
-                <p class="subtitle">Welcome to CarKilat: Malaysia's Premier Auto Detailing Brand. With seven convenient locations in the Klang Valley, we're pioneers of the 'All Labour Drive Thru Car Wash' service. Trusted by over 2,000,000 satisfied customers and awarded the prestigious, we're committed to excellence and convenience. Experience the CarKilat difference today</p>
-            </div>
+        <section class="about-us main-grid" id="about-us">
+    
+                <p class="subtitle about-us-subtitle">"Welcome to CarKilat: Your Award-Winning Auto Detailing Destination</p>
+                <h2 class="title about-us-title">CarKilat Malaysia</h2>
+                <p class="subtitle about-us-subtitle">Welcome to CarKilat: Malaysia's Premier Auto Detailing Brand. With seven convenient locations in the Klang Valley, we're pioneers of the 'All Labour Drive Thru Car Wash' service. Trusted by over 2,000,000 satisfied customers and awarded the prestigious, we're committed to excellence and convenience. Experience the CarKilat difference today</p>
+
+        </section>
+        
         
 
-            <div class="info">
-                <div class="col">
-                    <i class="info-icon"></i>
-                    <p class="info-title">Founder</p>
-                    <p class="subtitle">Founded by passionate car enthusiast John Lee in 2006, boasting over 15 years of dedicated expertise in professional car beautification</p>
-                </div>
-                <div class="col">
-                    <i class="info-icon"></i>
-                    <p class="info-title">Team</p>
-                    <p class="subtitle">With a team of over 150 in-house experts, we collaborate closely with 7 renowned international automotive product brands</p>
-                </div>
-                <div class="col">
-                    <i class="info-icon"></i>
-                    <p class="info-title">Services</p>
-                    <p class="subtitle">Our track record speaks volumes: CarKilat has applied coatings to over 18,500 vehicles, ensuring lasting brilliance, and protected over 12,300 vehicles with our Paint Protection Film (PPF), shielding them from the elements. And with our commitment to excellence, there's plenty more to come</p>
-                </div>
-                <div class="col">
-                    <i class="info-icon"></i>
-                    <p class="info-title">Facilities</p>
-                    <p class="subtitle">Step into our custom bay: controlled temperature, cleanliness, and lighting for perfect detailing and PPF installation</p>
-                </div>
+        <section class="info main-grid">
+            <div class="col">
+                <i class="fa-regular fa-lightbulb info-icon"></i>
+                <p class="title info-title">Founder</p>
+                <p class="subtitle">Founded by passionate car enthusiast John Lee in 2006, boasting over 15 years of dedicated expertise in professional car beautification</p>
+            </div>
+            <div class="col">
+                <i class="fa-solid fa-people-group info-icon"></i>
+                <p class="title info-title">Team</p>
+                <p class="subtitle">With a team of over 150 in-house experts, we collaborate closely with 7 renowned international automotive product brands</p>
+            </div>
+            <div class="col">
+                <i class="fa-solid fa-spray-can-sparkles info-icon"></i>
+                <p class="title info-title">Services</p>
+                <p class="subtitle">
+                    CarKilat has coated 18,500 vehicles for lasting brilliance and protected 12,300 with Paint Protection Film. Our commitment to excellence ensures more to come.</p>
+            </div>
+            <div class="col">
+                <i class="fa-solid fa-car-side info-icon"></i>
+                <p class="title info-title">Facilities</p>
+                <p class="subtitle">Step into our custom bay: controlled temperature, cleanliness, and lighting for perfect detailing and PPF installation</p>
             </div>
         </section>
+        
 
-        <section class="services main-grid">
-            <div class="services-col">
-                <p class="subtitle">Start from RM200</p>
-                <h2 class="title">Interior Detailing</h2>
+        <section class="services main-grid"  id="services">
+            <div class="services-col interior-img">
+                <div class="services-content">
+                    <p class="subtitle service-subtitle">Start from RM200</p>
+                    <h2 class="title service-title">Interior Detailing</h2>
+                </div>
             </div>
 
-            <div class="services-col">
-                <p class="subtitle">Start from RM500</p>
-                <h2 class="-title">Exterior Detailing</h2>
+            <div class="services-col exterior-img">
+                <div class="services-content">
+                    <p class="subtitle service-subtitle">Start from RM500</p>
+                    <h2 class="-title service-title">Exterior Detailing</h2>
+                </div>
             </div>
 
-            <div class="services-col">
-                <p class="subtitle">Start from RM250</p>
-                <h2 class="title">Polish & Wax</h2>
+            <div class="services-col polish-img">
+                <div class="services-content">
+                    <p class="subtitle service-subtitle">Start from RM250</p>
+                    <h2 class="title service-title">Polish & Wax</h2>
+                </div>
             </div>
 
-            <div class="services-col">
-                <p class="subtitle">Start from RM1200</p>
-                <h2 class="title">Ceramic Coating 9H</h2>
+            <div class="services-col ceramic-img">
+                <div class="services-content">
+                    <p class="subtitle service-subtitle">Start from RM1200</p>
+                    <h2 class="title service-title">Ceramic Coating 9H</h2>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer main-grid">
-
-        <ul class="social-list">
-            <li class="social-item"></li>
-            <li class="social-item"></li>
-            <li class="social-item"></li>
-            <li class="social-item"></li>
-        </ul>
-
-
-        <div class="footer-main">
-            <a class="logo-link" href="index.html">
-                <img class="footer-logo" src="images/logo.png" alt="logo">
-            </a>
-
-            <div class="address">
-                <p>42, jalan aman 1/2</p>
-                <p>52200 Kepong</p>
-                <p>Kuala Lumpur</p>
-            </div>
-
-            <ul class="location-icon">
-                <li class="google-map"></li>
-                <li class="waze"></li>
-            </ul>
+    <div class="social-list">
+        <div class="social-item facebook">
+            <p class="social-title">facebook</p>
+            <i class="social-logo fa-brands fa-facebook-f"></i>
         </div>
 
+        <div class="social-item facebook">
+            <p class="social-title">instagram</p>
+            <i class="social-logo fa-brands fa-instagram"></i>
+        </div>
+
+        <div class="social-item facebook">
+            <p class="social-title">tiktok</p>
+            <i class="social-logo fa-brands fa-tiktok"></i>
+        </div>
+
+        <div class="social-item facebook">
+            <p class="social-title">youtube</p>
+            <i class="social-logo fa-brands fa-youtube"></i>
+        </div>
+    </div>
+
+
+
+    <footer class="footer main-grid footer-grid ">
+
+        <div class="footer-main ">
+            <a class="logo-link main-grid" href="index.html">
+                <img class="logo-img footer-logo" src="images/logo.png" alt="logo">
+            </a>
+    
+            <div class="address">
+                <p>42, Jalan Aman Puri 1/2, 52200 Kepong, Kuala Lumpur, Malaysia</p>
+            </div>
+    
+            <div class="location-icon">
+                <a class="waze-link" href="#">
+                    <img class="logo-img waze-logo" src="images/waze.png" alt="logo">
+                </a>
+    
+                <a class="googlemap-link" href="#">
+                    <img class="logo-img googlemap-logo" src="images/google-maps.png" alt="logo">
+                </a>
+            </div>
+        </div>
+
+
         <div class="outlets">
+            <h3 class="outlet-title title-pattern">Outlets</h3>
             <p class="branch">Kepong</p>
             <p class="branch">Ampang</p>
             <p class="branch">Mont Kiara</p>
@@ -134,34 +171,26 @@
         </div>
 
         <div class="operate-hrs">
-           <div class="date">
-            <div class="day">Monday</div>
-            <div class="time">10am - 10pm</div>
-           </div>
-           <div class="date">
-            <div class="day">Tuesday</div>
-            <div class="time">10am - 10pm</div>
-           </div>
-           <div class="date">
-            <div class="day">Wednesday</div>
-            <div class="time">10am - 10pm</div>
-           </div>
-           <div class="date">
-            <div class="day">Thursday</div>
-            <div class="time">10am - 10pm</div>
-           </div>
-           <div class="date">
-            <div class="day">Friday</div>
-            <div class="time">10am - 10pm</div>
-           </div>
-           <div class="date">
-            <div class="day">Saturday</div>
-            <div class="time">10am - 6pm</div>
-           </div>
-           <div class="date">
-            <div class="day">Sunday</div>
-            <div class="time">Rest</div>
-           </div>
+            <h3 class="operate-hrs-title title-pattern">Operating Hours</h3>
+            <div class="date">    
+                <div class="day">
+                <p>Monday</p>
+                <p>Tuesday</p>
+                <p>Wednesday</p>
+                <p>Thursday</p>
+                <p>Friday</p>
+                <p>Saturday</p>
+                <p>Sunday</p>
+            </div>
+            <div class="time">
+                <p>9am-6pm</p>
+                <p>9am-6pm</p>
+                <p>9am-6pm</p>
+                <p>9am-6pm</p>
+                <p>9am-6pm</p>
+                <p>9am-6pm</p>
+                <p>Rest</p>
+            </div>
         </div>
     </footer>
 

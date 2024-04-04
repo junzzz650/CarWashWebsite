@@ -33,33 +33,41 @@ img{
 
 h1,
 h2,
-.subtitle{
+.title
+{
     font-weight: 700;
-}
-
-.hero-title,
-.subtitle{
-    grid-column: 2/-2;
 }
 
 .hero-title{
     font-size: 3rem;
     color: #fff;
+    margin:0;
+}
+
+.hero-content{
+    grid-column: 2/-2;
+    display: flex;
+    flex-direction: column;
+  
 }
 
 .subtitle{
-    font-size: 0.9rem;
-    color: #78a6e1;
+    font-size: .8rem;
+    text-align: center;
+    max-width: 950px;
+    margin: 0 auto;
 }
 
 .about-us-title{
-    font-size: 2rem
+    font-size: 2rem;
+    justify-self: center;
+    margin-top: 0;
+    
 }
 
 .info-title{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
-
 
 /* ==================
     general layout
@@ -70,11 +78,15 @@ h2,
     grid-template-columns: minmax(1em, 1fr) minmax(0px, 700px) minmax(1em, 1fr);
 }
 
+@media (min-width: 600px) {
+    .main-grid{
+        grid-template-columns: minmax(1em, 1fr) repeat(4,minmax(110px, 350px)) minmax(1em, 1fr);
+    }
+}
 
 /* navigation */
 
 .header {
-    background: transparent;
     position: absolute;
     width: 100%;
     margin-bottom: 1em;
@@ -87,13 +99,13 @@ h2,
 }
 
 .logo-link {
-    width: 100%
+    max-width: 100%;
+
 }
 
 .logo-img {
-    height: 90px;
-    
-    
+    max-width: 100%;
+    height: 100px;
 }
 
 .nav{
@@ -117,6 +129,7 @@ h2,
     color: #fff;
     font-size: 2em;
     cursor: pointer;
+   
 }
 
 .close-nav:hover{
@@ -131,7 +144,6 @@ h2,
     margin-left: auto;
     cursor: pointer;
     border: 0;
-    
 }
 
 .nav-list {
@@ -143,7 +155,6 @@ h2,
     align-items: center;
     justify-content: space-around;
     height: 100%;
-  
 }
 
 .nav-link {
@@ -157,6 +168,36 @@ h2,
 }
 
 
+@media (min-width:600px){
+
+   .header{
+    background: rgba(30, 30, 30, 0.4);
+   }
+
+    .open-nav,
+    .close-nav {
+        display: none;
+    }
+    
+    .nav{
+        position: initial;
+        background: none;
+    }
+
+    .nav-list{
+        flex-direction: row;
+        justify-content:flex-end;    
+    }
+
+    .nav-item{
+        margin-right: 2em;
+    }
+
+    .nav-link{
+        font-size: 1rem;
+    }
+}
+
 /* footer */
 .social-list,
 .footer-main,
@@ -165,42 +206,292 @@ h2,
     grid-column: 2/-2;
 }
 
-
-
-
 /* ==================
     hero area
 ===================== */
 
 .hero {
-    background-image: linear-gradient(rgba(0,0,0,0.4),#000000),url(images/hero.jpg);;
+    background-image: linear-gradient(rgba(0,0,0,0.3),#000000),url(images/hero.jpg);
     background-color: black;
     background-size: cover;
-    padding: 3em;
-    
+    background-position: center ;
+    padding: 13em 0;  
+    margin-bottom: 3em;
+}
+
+.hero-content {
+    margin-top: 5em;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 .hero-subtitle {
     order: -1;
-    border: 1px red solid;
-    margin-top: 4em;
-    
+    align-self: center;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+    color: #91bbf2;
+    font-weight: 700;
 }
-
 
 /* ==================
     about us section
 ===================== */
 
-.intro,
-.info {
+.about-us > * {
     grid-column: 2/-2;
 }
 
+.intro {
+    border: 5px orange solid;  
+}
+
+.about-us-title::after{
+    content: "";
+    display: block;
+    width: 100%;
+    background:#91bbf2;
+    height: 30px;
+    margin-top: -30px;
+    margin-left: 10px;
+}
+
+.about-us-subtitle {
+    margin-bottom: 0;
+    line-height: 1.8;
+    font-size: .9rem;
+}
+
+/* ==================
+    info section
+===================== */
+
+.info{
+    text-align: center;
+    margin-bottom: 2em;
+    grid-column-gap: 2em;
+    
+}
+.col {
+    grid-column: 2 / -2;
+}
+
+@media (min-width: 600px) {
+    .col{
+        grid-column: span 1;
+    }
+    .col:first-child {
+        grid-column: 2 / span 1;
+    }
+}
+
+.info-icon {
+    border-radius: 50%;
+    background: rgb(246, 246, 246);
+    font-size: 2.7rem;
+    padding: 0.6em;
+    margin-top: 1em;
+}
+
+.info-title::after {
+    content:"";
+    display: block;
+    background: #91bbf2;
+    width: 20px;
+    height: 4px;
+    text-align: center;
+    margin-top: .3em;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* ==================
     services section
 ===================== */
 
 .services-col {
+    grid-column: 1/-1;
+    background-image: linear-gradient(rgba(0,0,0,0.3),#000000),url(images/hero.jpg);
+    color: white;
+    padding: 6em 6em 6em 0;
+    background-size: cover;
+    background-position: center ;
+}
+
+@media (min-width:600px) {
+    .services-col:first-child {
+        grid-column: 1/ span 3;
+    }
+
+    .services-col{
+        grid-column: span 3;
+    }
+}
+
+.services-content {
+    margin-left: 2em;
+}
+
+.service-subtitle {
+    text-align: start;
+    color: #91bbf2;
+    font-weight: 700;
+}
+.service-title {
+    font-size: 2.2rem;
+}
+
+/*background Images*/
+
+.interior-img {
+    background-image: linear-gradient(rgba(0,0,0,0.3),#000000),url(images/interior.jpg);
+}
+
+.exterior-img {
+    background-image: linear-gradient(rgba(0,0,0,0.3),#000000),url(images/exterior.jpg);
+}
+
+.polish-img {
+    background-image: linear-gradient(rgba(0,0,0,0.3),#000000),url(images/polish.jpg);
+}
+
+.ceramic-img {
+    background-image: linear-gradient(rgba(0,0,0,0.3),#000000),url(images/ceramic.jpg);
+}
+
+/*social-list*/
+
+.social-list {
+    display: flex;
+    list-style: none;
+    grid-column: 1/-1;
+    justify-content: center;
+    background: #000;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    padding: .3em 1em;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.social-item:hover {
+    color: #91bbf2;
+}
+
+.social-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.social-logo {
+    margin-left: 1em;
+    font-size: 1.5rem;
+    opacity: .5;
+}
+
+/* ==================
+    footer
+===================== */
+
+footer {
+    background: #000;
+    color: #fff; 
+    grid-template-areas: ". footermain ."
+                         ". outlets ."
+                        ". operatehrs ."                     
+}
+
+
+/*footer-logo*/
+
+.footer-logo{
     grid-column: 2/-2;
+    height: 150px;
+}
+
+/* footer-main */
+
+.footer-main {
+    grid-area: footermain;
+}
+
+.address {
+    font-size: 1rem;
+    margin-bottom: 1em;  
+}
+
+.location-icon {
+    display: flex;
+    gap: 2em;
+}
+
+.waze-logo,
+.googlemap-logo {
+    height: 65px;
+}
+
+.outlets {
+    grid-area: outlets;
+}
+
+.outlet-title{
+    font-size: 1.5rem;
+    margin-bottom: 1.7em;
+}
+
+.title-pattern::after {
+    content:"";
+    display: block;
+    background: #91bbf2;
+    width: 20px;
+    height: 4px;
+    margin-top: .3em;
+}
+
+.branch{
+    font-size: 1.2rem;
+}
+
+.branch::before{
+    content: "\00BB"; 
+    margin-right: .8em;
+    font-size: 1.5rem;
+}
+
+.branch:hover {
+    color: #91bbf2;
+}
+
+.operate-hrs{
+    display: flex;
+    flex-direction: column;
+    grid-area: operatehrs;
+}
+
+.operate-hrs-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.7em;
+}
+
+.operate-hrs-title::after {
+    width: 40px;
+}
+
+.date{
+    display: flex;
+    gap: 2em;
+}
+
+@media(min-width:600px) {
+
+    .footer-grid{
+        grid-template-columns: minmax(1em, 1fr) repeat(3,minmax(110px, 350px)) minmax(1em, 1fr);     
+    }
+
+    footer {
+        grid-template-areas: ". footermain outlets operatehrs ";
+    }
 }
