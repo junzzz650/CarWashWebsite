@@ -12,8 +12,8 @@ openButton.addEventListener("click", () => {
     nav.classList.add('navigation-open');
 })
 
-navLink.forEach(function(element) {
-    element.addEventListener("click", () => {
+navLink.forEach(e => {
+    e.addEventListener("click", () => {
         nav.classList.remove('navigation-open')
     } )
 });

@@ -399,6 +399,7 @@ h2,
 footer {
     background: #000;
     color: #fff; 
+    padding-bottom: 2em;
     grid-template-areas: ". footermain ."
                          ". outlets ."
                         ". operatehrs ."                     
@@ -409,7 +410,8 @@ footer {
 
 .footer-logo{
     grid-column: 2/-2;
-    height: 150px;
+    height: 130px;
+    margin: 0;
 }
 
 /* footer-main */
@@ -417,6 +419,15 @@ footer {
 .footer-main {
     grid-area: footermain;
 }
+
+.fa-phone,
+.fa-envelope,
+.fa-map-location-dot{
+    color: #91bbf2;
+    font-size: 1.5rem;
+}
+
+
 
 .address {
     font-size: 1rem;
@@ -439,7 +450,7 @@ footer {
 
 .outlet-title{
     font-size: 1.5rem;
-    margin-bottom: 1.7em;
+    margin-bottom: 1em;
 }
 
 .title-pattern::after {
@@ -453,6 +464,7 @@ footer {
 
 .branch{
     font-size: 1.2rem;
+    margin-top: .8em;
 }
 
 .branch::before{
@@ -469,16 +481,15 @@ footer {
     display: flex;
     flex-direction: column;
     grid-area: operatehrs;
+    
 }
 
 .operate-hrs-title {
     font-size: 1.5rem;
-    margin-bottom: 1.7em;
+    margin-bottom: .7em;
 }
 
-.operate-hrs-title::after {
-    width: 40px;
-}
+
 
 .date{
     display: flex;
